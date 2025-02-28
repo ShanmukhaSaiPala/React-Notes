@@ -7,7 +7,7 @@
             "use" : "@vercel/node"
         },
         {
-            "scr" : "/scr/**/*",
+            "scr" : "scr/**/*",
             "use" : "@vercel/static"
          }
     ],
