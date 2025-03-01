@@ -22,6 +22,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/note", verifyToken, noteRouter);
 
 app.listen(PORT, () => {
+  console.log("hello from server", process.env.FRONTEND_URL)
   console.log("Server is running on port", PORT);
   connectDB();
 });
