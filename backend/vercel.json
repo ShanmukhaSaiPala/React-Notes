@@ -3,17 +3,17 @@
     "version" : 2,
     "builds" : [
         {
-            "scr" : "index.js",
+            "src" : "index.js",
             "use" : "@vercel/node"
         },
         {
-            "scr" : "scr/**/*",
+            "src" : "src/**/*",
             "use" : "@vercel/static"
          }
     ],
     "routes": [
         {
-            "scr":"/(.*)","dest" : "/"
+            "src":"/(.*)","dest" : "/"
         }
     ]
 }

@@ -16,12 +16,13 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: ["http://localhost:5173"], credentials: true }));
+app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
 
 app.use("/api/auth", authRouter);
 app.use("/api/note", verifyToken, noteRouter);
 
 app.listen(PORT, () => {
+  console.log("hello from server", process.env.FRONTEND_URL)
   console.log("Server is running on port", PORT);
   connectDB();
 });
